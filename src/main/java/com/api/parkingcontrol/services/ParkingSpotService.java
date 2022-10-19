@@ -3,15 +3,20 @@ package com.api.parkingcontrol.services;
 
 import com.api.parkingcontrol.models.ParkingSpotModel;
 import org.springframework.stereotype.Service;
+
 import com.api.parkingcontrol.repositories.ParkingSpotRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 public class ParkingSpotService {
 
 
     final ParkingSpotRepository parkingSpotRepository;
+    public List<ParkingSpotModel> findAll(){
+        return parkingSpotRepository.findAll();
+    };
 
     public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
         this.parkingSpotRepository = parkingSpotRepository;
@@ -33,4 +38,5 @@ public class ParkingSpotService {
     public boolean existsByApartmentAndBlock(String apartment, String block) {
         return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
     }
+
 }
