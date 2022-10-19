@@ -1,4 +1,4 @@
-<h1>Parking Control API developed by Rafael Santos de Araujo</h1>
+<h1>Parking Control API developed by Rafael Santos</h1>
 
 
 A CRUD project in order to practice basic knowledge.
